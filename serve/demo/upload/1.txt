@@ -1,0 +1,4 @@
+            var response = {
+                message: 'File uploaded successfully', 
+                filename: uploadedFile.originalname
+            };

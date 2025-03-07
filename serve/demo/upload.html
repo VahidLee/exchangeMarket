@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>文件上传表单</title>
+</head>
+<body>
+    <h3>文件上传：</h3>
+    选择一个文件上传: <br />
+    <form action="/file_upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" size="30" />
+        <br />
+        <input type="submit" value="上传文件" />
+    </form>
+</body>
+
+</html>
+
+<!--
+action="/file_upload"：指定了表单提交的目标 URL;
+method="post"：表示表单数据将使用 HTTP POST 方法发送到服务器;
+enctype="multipart/form-data"：这个属性指定了表单数据的编码类型;
+    multipart/form-data 用于表单上传文件时，必须使用这种编码方式。它告诉浏览器和服务器，表单数据将包括文件和文本字段，需要分多个部分进行编码。
+    enctype="multipart/form-data" 是与文件上传一起使用的，意味着表单不仅包含普通的文本数据（如用户名、密码等），还包括文件数据（如图片、视频、文档等）。
+    在这种编码下，浏览器将文件作为二进制数据上传，同时还会生成其他字段的数据。
+-->
+
+<!-- 
+<input type="file">：这是一个文件输入框，允许用户从本地计算机选择文件进行上传。
+name="image"：name 属性为输入框指定了一个名称。在表单提交时，文件会作为名为 image 的字段上传到服务器。服务器端可以通过该名称（image）来访问上传的文件。
+size="50"：这个属性控制输入框的显示宽度，表示输入框可容纳 50 个字符的宽度。注意，这个属性并不控制文件上传的大小限制，文件大小的限制通常由服务器端配置。
+-->
